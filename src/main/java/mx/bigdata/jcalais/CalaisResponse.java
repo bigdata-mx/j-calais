@@ -32,6 +32,8 @@ public interface CalaisResponse {
   Iterable<CalaisObject> getRelations();
   
   Iterable<CalaisObject> getSocialTags();
+
+  Iterable<CalaisObject> getIndustries();
   
   String getPayload();
   
