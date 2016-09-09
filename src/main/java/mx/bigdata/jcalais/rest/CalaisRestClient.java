@@ -167,6 +167,8 @@ public final class CalaisRestClient implements CalaisClient {
       .unmodifiableIterable(hierarchy.get("relations"));    
     final Iterable<CalaisObject> socialTags = Iterables  
       .unmodifiableIterable(hierarchy.get("socialTag"));
+    final Iterable<CalaisObject> industries = Iterables
+            .unmodifiableIterable(hierarchy.get("industry"));
     return new CalaisResponse() {
       public CalaisObject getInfo() { return info; }
       
@@ -179,6 +181,8 @@ public final class CalaisRestClient implements CalaisClient {
       public Iterable<CalaisObject> getRelations() { return relations; }
       
       public Iterable<CalaisObject> getSocialTags() { return socialTags; }
+
+      public Iterable<CalaisObject> getIndustries() { return industries; }
 
       public String getPayload() { return payload; }
     };
